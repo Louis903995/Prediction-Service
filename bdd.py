@@ -36,6 +36,7 @@ def creer_base_donnees():
         CREATE TABLE IF NOT EXISTS Categories (
             id_categorie INTEGER PRIMARY KEY AUTOINCREMENT,
             id_ticket INTEGER,
+            libelle TEXT,
             categorie TEXT
         )
     """)
