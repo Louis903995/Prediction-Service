@@ -11,7 +11,7 @@ print("Répertoire courant :", os.getcwd())
 print("Fichiers dans ce dossier :", os.listdir())
 
 # 1. Chargement des données CSV
-data = pd.read_csv("data/tickets_categorie_final.csv", sep=';')
+data = pd.read_csv("../../data/Open_food_fact/tickets_categorie_final.csv", sep=';')
 
 # 2. Pré-traitement (optionnel mais recommandé)
 data['Produit'] = data['Produit'].str.lower()  # mettre en minuscule
@@ -39,7 +39,7 @@ svm_model.fit(X_train, y_train)
 y_pred_svm = svm_model.predict(X_test)
 print(classification_report(y_test, y_pred_svm))
 
-# Création du dossier 'modeles' s'il n'existe pas
+# Création du dossier 'modeles' s'il n'existe pas, path 
 os.makedirs("modeles", exist_ok=True)
 
 # Sauvegarde du modèle de régression logistique
