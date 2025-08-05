@@ -22,4 +22,5 @@ distribution = true
 export_requirements = "pdm export -o requirements.txt --without-hashes"
 build_docker_image = "bash -c 'VERSION=$(grep -oP \"version = \\\"\\K[^\\\"]+\" pyproject.toml); docker build -t prediction-service:$VERSION -t prediction-service:latest .'"
 build_docker = { composite = ["export_requirements", "build_docker_image"] }
-run_docker = "docker run -d --name prediction-service -p 80:80 prediction-service"
+container = "docker run -d --name prediction-service -p 80:80 prediction-service:latest"
+fastapi = "uvicorn app.main:app --reload"
