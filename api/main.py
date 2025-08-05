@@ -29,4 +29,3 @@ def predict_categories(data: ProductInput):
             for p, c in zip(produits, predictions)
         ]
     }
-
