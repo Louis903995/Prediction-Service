@@ -5,7 +5,6 @@ import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 import os 
 
-
 # Charger le vectorizer TF-IDF
 with open("modeles_onnx/tfidf_params.json", "r") as f:
     tfidf_data = json.load(f)
